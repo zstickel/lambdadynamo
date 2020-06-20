@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang= "en-US">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Andon Chord</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.658.0.min.js"></script>
+    <script src="script.js" defer></script>  
+</head>
+
+<body>
+    
+    <div id="maincontent">
+        <h1> The Andon Chord </h1> <!--This will eventually be dynamic with the selected project name indicated-->
+        <h2>Project Andon Chord Test</h2>
+        <div id="replacelabel"></div>
+        <form name="RiskInput">
+            <label for="frisk">Input a name for the risk: </label>
+            <input type="text" id="frisk" name="frisk"><br><br>   
+            <label for="friskdescription">Provide a description for the risk: </label>
+            <input type="text" id="friskdescription" name="friskdescription"><br><br>   
+            <label for="fprobability">Choose a probability category:</label>
+            <select id="fprobability">
+              <option value="VH">Very high, >70% probability to occur.</option>
+              <option value="H">High, 50-70% probability to occur. </option>
+              <option value="M">Medium, 31-50% probability to occur. </option>
+              <option value="L">Low, 11-30% probability to occur. </option>
+              <option value="VL">Very low, 1-10% probability to occur. </option>
+              <option value="N"> Nil, &lt 1% probability to occur. </option>
+            </select><br><br>
+            <label for="ftimeimpact">Choose the time impact on project objectives:</label>
+            <select id="ftimeimpact">
+              <option value="VH">Very high, >6 months delay.</option>
+              <option value="H">High, 3-6 months delay. </option>
+              <option value="M">Medium, 1-3 months delay. </option>
+              <option value="L">Low, 1-4 weeks delay. </option>
+              <option value="VL">Very low, 1 week delay. </option>
+              <option value="N"> Nil, No change. </option>
+            </select>
+            <br><br>
+            <label for="fcostimpact">Choose the cost impact on project objectives:</label>
+            <select id="fcostimpact">
+              <option value="VH">Very high, >$5M.</option>
+              <option value="H">High, $1M-$5M. </option>
+              <option value="M">Medium, $501K-$1M. </option>
+              <option value="L">Low, $100K-$500k. </option>
+              <option value="VL">Very low, &lt100k. </option>
+              <option value="N"> Nil, No change. </option>
+            </select>
+            <br><br>
+            <label for="fqualityimpact">Choose the quality impact on project objectives:</label>
+            <select id="fqualityimpact">
+              <option value="VH">Very significant impact on overall functionality.</option>
+              <option value="H">Significant impact on overall functionality. </option>
+              <option value="M">Some impact in key functional areas. </option>
+              <option value="L">Minor impact on overall functionality. </option>
+              <option value="VL">Minor impact on secondary functions. </option>
+              <option value="N"> No change in functionality. </option>
+            </select>
+            <br><br>
+            <label for="fadditionalentry">Do you have an additional risk to input?</label>
+            <select id="fadditionalentry">
+              <option value="Y">Yes</option>
+              <option value="N">No </option></select><br><br>
+            <button type="button" onclick="inputForm()">Submit</button>
+          </form>
+
+      </div>
+</body>
+
+
+</html>
