@@ -12,7 +12,7 @@ var flight;
 var numhazards=0;
 var newflight=true;
 var xhr = new XMLHttpRequest();
-const url='https://ewbm9oanwk.execute-api.us-east-1.amazonaws.com/Testing/RiskappNewrisk';
+const url=YOUR_API_GATEWAY_URL;
 
 
 
