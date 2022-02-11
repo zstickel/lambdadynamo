@@ -1,1 +1,1 @@
-This repo contains a basic javascript template to connect to AWS API gateway to submit form data to dynamo db with a lambda function.
+This repo contains a basic javascript template to make a POST request to AWS API gateway to submit form data to dynamo db with a lambda function.
